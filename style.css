@@ -1,0 +1,57 @@
+/* Shared stylesheet for tn-sump-sites demo pages — mobile-first, no frameworks */
+:root{
+  --navy:#0b1e33; --teal:#0e9aa7; --teal-d:#0b7c87;
+  --aqua:#e6f7f9; --ink:#1c2b3a; --muted:#5b6b7c; --line:#dbe7ec;
+  --gold:#f5a623; --radius:14px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);color:var(--ink);line-height:1.6;background:#f7fbfc}
+a{color:var(--teal-d)}
+img{max-width:100%;height:auto}
+.wrap{max-width:1060px;margin:0 auto;padding:0 18px}
+.demo-bar{background:#fff3cd;color:#664d03;text-align:center;font-size:13px;padding:8px 12px;border-bottom:1px solid #ffe69c}
+.site-head{background:var(--navy);color:#fff;position:sticky;top:0;z-index:50}
+.head-in{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;max-width:1060px;margin:0 auto}
+.brand{font-weight:800;font-size:16px;line-height:1.25;color:#fff;text-decoration:none;max-width:70%}
+.brand span{color:#5ad1db}
+.nav a{color:#cfe3ea;text-decoration:none;margin-left:16px;font-size:14.5px}
+.nav a:hover{color:#fff}
+.btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:10px;padding:12px 20px;font-size:16px;border:0;cursor:pointer}
+.btn-call{background:var(--gold);color:#201500}
+.btn-wa{background:#22b358;color:#fff}
+.btn-teal{background:var(--teal);color:#fff}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#134a5e 60%,var(--teal-d) 100%);color:#fff;padding:52px 0 46px}
+.hero h1{font-size:28px;line-height:1.25;margin:0 0 12px}
+.hero p.sub{color:#cfe9ee;font-size:17px;margin:0 0 20px;max-width:640px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+section.block{padding:38px 0}
+h2.sec{font-size:23px;color:var(--navy);margin:0 0 6px}
+p.lead{color:var(--muted);margin:0 0 20px}
+.cards{display:grid;grid-template-columns:1fr;gap:14px}
+table.price{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;font-size:15px}
+table.price th{background:var(--navy);color:#fff;text-align:left;padding:11px 12px}
+table.price td{border-top:1px solid var(--line);padding:11px 12px}
+table.price tr td:last-child{font-weight:800;color:var(--teal-d);white-space:nowrap}
+.steps{counter-reset:step;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:8px 20px}
+.step{border-bottom:1px dashed var(--line);padding:13px 0 13px 46px;position:relative}
+.step:last-child{border-bottom:0}
+.step::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:13px;width:32px;height:32px;border-radius:50%;background:var(--aqua);color:var(--teal-d);font-weight:800;display:flex;align-items:center;justify-content:center}
+.step b{color:var(--navy)}
+.step p{margin:4px 0 0;color:var(--muted);font-size:14.5px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:10px;padding:14px 16px}
+.faq summary{font-weight:700;color:var(--navy);cursor:pointer}
+.faq p{color:var(--muted);margin:8px 0 0;font-size:15px}
+.nap{background:var(--navy);color:#d6e6ec;padding:34px 0 90px}
+.nap h2{color:#fff;font-size:20px;margin:0 0 10px}
+.nap address{font-style:normal;line-height:1.8}
+.nap a{color:#5ad1db}
+.map{border:0;width:100%;height:280px;border-radius:var(--radius);margin-top:16px}
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;background:#fff;border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.sticky-cta a{flex:1;text-align:center}
+@media(min-width:720px){
+  .hero h1{font-size:38px}
+  .sticky-cta{display:none}
+  .nap{padding-bottom:40px}
+}
